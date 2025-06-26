@@ -1,4 +1,4 @@
-# Barcode Automation
+# Label Flow
 
 A simple tool to scan barcodes, save them in an Excel file, and prepare for label printing.
 
