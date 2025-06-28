@@ -18,7 +18,7 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
 2. DYMO Label Software v8 installed
     - Download from: DYMO Official Support
 
-3. Python 3.10+ installed
+3. Python 3.10 installed
     - Download from: python.org
 
 4. Barcode scanner (acts as keyboard input — e.g. Tera D5100)
