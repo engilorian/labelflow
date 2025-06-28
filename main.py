@@ -7,7 +7,7 @@ def main():
     entries = scan_barcodes()
     if entries:
         append_to_spreadsheet(entries)
-        print_labels(entries) 
+        print_labels(entries)
 
 if __name__ == '__main__':
     main()
