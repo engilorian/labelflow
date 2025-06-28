@@ -16,10 +16,10 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
 1. DYMO LabelWriter printer (set up and connected to your computer)
 
 2. DYMO Label Software v8 installed
-    - Download from: DYMO Official Support
+    - Download from: [DYMO Official Support](https://www.dymo.com/support?cfid=dymo-compatibility-chart)
 
 3. Python 3.10 installed
-    - Download from: python.org
+    - Download from: [python.org](https://www.python.org/downloads/release/python-3100/)]
 
 4. Barcode scanner (acts as keyboard input — e.g. Tera D5100)
 
