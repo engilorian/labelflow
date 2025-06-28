@@ -32,7 +32,7 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
     - Print a test label using DYMO Label Software to confirm your printer works
 
 2. Install Python & Project Dependencies
-    - Download and install Python 3.10+ from [python.org](https://www.python.org/downloads/release/python-3100/)
+    - Download and install Python 3.10 from [python.org](https://www.python.org/downloads/release/python-3100/)
 
     - Open Command Prompt and change to the project directory:
 
