@@ -5,17 +5,22 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
 
 ## Features
 
-Scan barcodes (your scanner acts like a keyboard)
-Instantly print a label for each scanned barcode
-Data is automatically saved in barcodes.xlsx (timestamped log)
-No technical knowledge required after setup
+- Plug-and-scan: Your barcode scanner acts like a keyboard — just scan and go.
+- Instant printing: A label is printed automatically for every barcode scanned.
+- Automatic logging: Scanned data is saved to a dated Excel file (e.g., barcodes_2025-06-27.xlsx) inside the data/ folder.
+- Timestamped records: Every scan includes the exact time it occurred.
+- No duplicates: Identical entries (same barcode + timestamp) are filtered out.
+
 
 ## Prerequisites
 1. DYMO LabelWriter printer (set up and connected to your computer)
+
 2. DYMO Label Software v8 installed
     - Download from: DYMO Official Support
+
 3. Python 3.10+ installed
     - Download from: python.org
+
 4. Barcode scanner (acts as keyboard input — e.g. Tera D5100)
 
 
@@ -28,7 +33,9 @@ No technical knowledge required after setup
 
 2. Install Python & Project Dependencies
     - Download and install Python 3.10+ from python.org
+
     - Open Command Prompt and change to the project directory:
+
     ```bash
     cd path\to\labelflow
     ```
@@ -37,6 +44,7 @@ No technical knowledge required after setup
     python -m venv env
     . env\Scripts\activate
     ```
+
     - Install Python requirements:
     ```bash
     pip install -r requirements.txt
@@ -62,11 +70,19 @@ No technical knowledge required after setup
 
 
 ## Where to Find Your Data
-- All scanned barcodes are saved in:
+- All scanned barcodes are saved automatically in the data/ folder in your project.
+
+- A new Excel file is created each day with a name like:
     ```bash
-    barcodes.xlsx
+    data/barcodes_2025-06-27.xlsx
     ```
-- Each row: barcode, timestamp
+
+- Each row contains:
+    - barcode — the scanned code
+    - timestamp — the exact date and time it was scanned
+
+- The data is appended automatically with each scan session.
+    Duplicate entries (same barcode + timestamp) are ignored to prevent clutter or mistakes.
 
 ## Troubleshooting
 - Printer not printing?
