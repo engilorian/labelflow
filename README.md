@@ -1,15 +1,16 @@
 # Label Flow
 
-A user-friendly tool for scanning barcodes, automatically saving them in an Excel file, and instantly printing barcode labels using your DYMO LabelWriter.
+A user-friendly tool for scanning asset tags, serial numbers, and PO numbers — automatically saving the data in timestamped Excel files and instantly printing barcode labels.
 
 
 ## Features
 
 - Plug-and-scan: Your barcode scanner acts like a keyboard — just scan and go.
-- Instant printing: A label is printed automatically for every barcode scanned.
-- Automatic logging: Scanned data is saved to a dated Excel file (e.g., barcodes_2025-06-27.xlsx) inside the data/ folder.
-- Timestamped records: Every scan includes the exact time it occurred.
-- No duplicates: Identical entries (same barcode + timestamp) are filtered out.
+- Multi-field labels: Prints Asset Tag, Serial Number, and PO Number on each label.
+- Instant printing or batch mode: Print labels immediately or after scanning all items.
+- Automatic logging: Scanned data saved to daily Excel files (e.g., barcodes_2025-06-27.xlsx) inside the data/ folder.
+- Timestamped records: Every entry includes the exact date and time scanned.
+- No duplicates: Prevents duplicate entries based on all scanned fields plus timestamp.
 
 
 ## Prerequisites
@@ -63,14 +64,16 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
     python main.py
     ```
 
-3. Choose a printing mode when prompted:
-    - 1: Print each label immediately after scanning
-    - 2: Scan barcodes first, then print labels together
+3. Choose a printing mode:
+    - 1 — Print each label immediately after scanning an asset
+    - 2 — Scan all assets first, then print labels in batch
 
-4. Start scanning barcodes:
-    - Simply scan each barcode
-    - Repeat for each item
-    - When finished, type **done** and press Enter to stop scanning (this ends the scanning session)
+4. Enter data as prompted:
+    - Input PO Number once at start
+    - Input starting Asset Tag Number
+    - Type exit at any prompt to end scanning
+
+5. The program prints labels and saves all scanned data.
 
 
 ## Where to Find Your Data
@@ -81,12 +84,13 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
     data/barcodes_2025-06-27.xlsx
     ```
 
-- Each row contains:
-    - barcode — the scanned code
-    - timestamp — the exact date and time it was scanned
+- Columns stored per row:
+    - asset_tag
+    - serial_num
+    - po_num
+    - timestamp (ISO format date/time)
 
-- The data is appended automatically with each scan session.
-    Duplicate entries (same barcode + timestamp) are ignored to prevent clutter or mistakes.
+- New scans append to the existing daily file, no duplicate rows saved.
 
 ## Troubleshooting
 - Printer not printing?
@@ -97,6 +101,10 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
 - Barcode not printing as label?
     - Ensure the barcode scanner is connected and functioning
     - Reboot the printer and computer if needed
+
+- Scanner issues?
+    - Confirm barcode scanner acts as keyboard input.
+    - Test typing barcodes manually if needed.
 
 --
 
