@@ -1,4 +1,5 @@
 import win32com.client
+
 from flow.config import LABEL_FILE, PRINTER_NAME
 
 
@@ -9,12 +10,12 @@ def print_labels(entries):
     if not dymo.Open(LABEL_FILE):
         raise Exception(f"Could not open label file at {LABEL_FILE}")
 
+    dymo.SelectPrinter(PRINTER_NAME)
     for entry in entries:
-        code = entry["barcode"]
-        label.SetField("Barcode", code)
-        label.SetField("Text", code)
-        dymo.SelectPrinter(PRINTER_NAME)
+        label.SetField("ASSET_TAG", entry['asset_tag'])
+        label.SetField("SERIAL_NUM", entry['serial_num'])
+        label.SetField("PO_NUM", entry['po_num'])
         dymo.Print(1, False)
-        print(f"Printed: {code}")
+        print(f"Printed label for Asset Tag: {entry['asset_tag']}")
 
     print("All labels printed.")
