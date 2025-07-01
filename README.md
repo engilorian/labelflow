@@ -63,10 +63,14 @@ A user-friendly tool for scanning barcodes, automatically saving them in an Exce
     python main.py
     ```
 
-3. Start scanning barcodes:
-    - Scan one barcode, then press Enter
+3. Choose a printing mode when prompted:
+    - 1: Print each label immediately after scanning
+    - 2: Scan barcodes first, then print labels together
+
+4. Start scanning barcodes:
+    - Simply scan each barcode
     - Repeat for each item
-    - Type exit and press Enter when done
+    - When finished, type **done** and press Enter to stop scanning (this ends the scanning session)
 
 
 ## Where to Find Your Data
