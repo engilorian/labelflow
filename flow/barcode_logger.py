@@ -2,16 +2,17 @@ from datetime import datetime
 
 
 def scan_barcodes(print_immediately=False, print_callback=None):
-    print("✅ Scanner Ready: Scan barcodes now.")
-    print("ℹ️  Type 'exit' and hit Enter to stop scanning.\n")
+    print("✅ Ready: Scan barcodes now.")
+    print("ℹ️  Type 'done' and press Enter to finish.\n")
 
     entries = []
+
     while True:
         barcode = input("Scan: ").strip()
-        if barcode.lower() == 'exit':
+        if barcode.lower() == 'done':
             break
         if not barcode:
-            print("⚠️  Empty scan detected. Try again.")
+            print("⚠️ Empty scan detected. Try again.")
             continue
 
         timestamp = datetime.now().isoformat(timespec='seconds')
